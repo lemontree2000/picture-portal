@@ -1,13 +1,13 @@
 {
-    "name": "Vue Chrome Extension",
+    "name": "stacksweet.com",
     "version": "1.0.0",
     "manifest_version": 2,
-    "description": "Vue.js Chrome Extension Template",
-    "author": "Jaeger <JaegerCode@gmail.com>",
-    "homepage_url": "https://github.com/jae-jae",
+    "description": "stacksweet.com Chrome Extension",
+    "author": "Edward <gonelove.guo@gmail.com>",
+    "homepage_url": "https://github.com/lemontree2000",
     "icons": {
-      "16": "icons/main.png",
-      "128": "icons/main.png"
+      "16": "icons/protal.png",
+      "128": "icons/protal.png"
     },
     "background": {
       "scripts": [
@@ -28,8 +28,7 @@
     "content_scripts": [
       {
         "matches": [
-          "http://*/*",
-          "https://*/*"
+          "http://local.baozun.com/*"
         ],
         "js": [
           "scripts/content.js"
@@ -40,10 +39,10 @@
     ],
     "browser_action": {
       "default_icon": {
-        "19": "icons/main.png",
-        "38": "icons/main.png"
+        "19": "icons/protal.png",
+        "38": "icons/protal.png"
       },
-      "default_title": "Vue Chrome Extension",
+      "default_title": "stacksweet.com",
       "default_popup": "ui/index.html#popup"
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",

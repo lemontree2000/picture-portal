@@ -13,6 +13,11 @@ const routes = [
     path: "/popup",
     name: "popup",
     component: () => import("../views/Popup.vue")
+  },
+  {
+    path: "/background",
+    name: "background",
+    component: () => import("../views/Background.vue")
   }
 ];
 
