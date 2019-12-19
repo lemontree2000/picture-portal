@@ -6,8 +6,8 @@
     "author": "Edward <gonelove.guo@gmail.com>",
     "homepage_url": "https://github.com/lemontree2000",
     "icons": {
-      "16": "icons/protal.png",
-      "128": "icons/protal.png"
+      "16": "icons/portal.png",
+      "128": "icons/portal.png"
     },
     "background": {
       "scripts": [
@@ -39,8 +39,8 @@
     ],
     "browser_action": {
       "default_icon": {
-        "19": "icons/protal.png",
-        "38": "icons/protal.png"
+        "19": "icons/portal.png",
+        "38": "icons/portal.png"
       },
       "default_title": "stacksweet.com",
       "default_popup": "ui/index.html#popup"
