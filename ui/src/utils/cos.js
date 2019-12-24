@@ -33,7 +33,7 @@ class CosUtil {
       {
         Bucket: this.config.Bucket, // Bucket 格式：test-1250000000
         Region: this.config.Region,
-        Key: "Picture-Portal/" + file.name,
+        Key: "picture-portal/" + file.name,
         Body: file,
         onTaskReady: options.onTaskReady,
         onHashProgress: options.onHashProgress,

@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "clipboard": "^2.0.4",
     "core-js": "^3.3.2",
     "cos-js-sdk-v5": "^0.5.22",
     "rxjs": "^6.5.3",
