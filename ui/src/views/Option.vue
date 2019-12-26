@@ -1,7 +1,9 @@
 <template>
   <div class="option">
     <h3>私有图床云配置</h3>
-    <p>目前只支持腾讯云对象存储，插件为无服务架构，配置信息不会上传服务器，为避免泄露，请勿将配置信息告诉他人。</p>
+    <p>
+      目前只支持腾讯云对象存储，插件为无服务架构，配置信息不会上传服务器，为避免泄露，请勿将配置信息告诉他人。
+    </p>
     <ul>
       <li>
         <label for="SecretId">
@@ -14,7 +16,7 @@
           v-model="userConfig.SecretId"
           placeholder="请输入SecretId"
         />
-        <p class="error">{{formErrors.SecretIdError}}</p>
+        <p class="error">{{ formErrors.SecretIdError }}</p>
       </li>
       <li>
         <label for="SecretKey">
@@ -27,23 +29,33 @@
           v-model="userConfig.SecretKey"
           placeholder="请输入SecretKey"
         />
-        <p class="error">{{formErrors.SecretKeyError}}</p>
+        <p class="error">{{ formErrors.SecretKeyError }}</p>
       </li>
       <li>
         <label for="Bucket">
           Bucket
           <span>*</span>
         </label>
-        <input :type="inputType" id="Bucket" v-model="userConfig.Bucket" placeholder="请输入Bucket" />
-        <p class="error">{{formErrors.BucketError}}</p>
+        <input
+          :type="inputType"
+          id="Bucket"
+          v-model="userConfig.Bucket"
+          placeholder="请输入Bucket"
+        />
+        <p class="error">{{ formErrors.BucketError }}</p>
       </li>
       <li>
         <label for="Region">
           Region
           <span>*</span>
         </label>
-        <input :type="inputType" id="Region" v-model="userConfig.Region" placeholder="请输入Region" />
-        <p class="error">{{formErrors.RegionError}}</p>
+        <input
+          :type="inputType"
+          id="Region"
+          v-model="userConfig.Region"
+          placeholder="请输入Region"
+        />
+        <p class="error">{{ formErrors.RegionError }}</p>
       </li>
       <!-- <li>
         <label for="folder">文件夹名称(选填)</label>
@@ -64,7 +76,7 @@ export default {
     };
   },
   async created() {
-    chrome.storage.sync.get("userConfig", storage => {
+    window.chrome.storage.sync.get("userConfig", storage => {
       if (storage.userConfig) {
         this.userConfig = storage.userConfig;
         this.inputType = "password";
@@ -76,8 +88,8 @@ export default {
     async saveConfig() {
       const isVaild = this.vaildform();
       if (!isVaild) return;
-      chrome.storage.sync.set({ userConfig: this.userConfig }, () => {
-        const bg = chrome.extension.getBackgroundPage();
+      window.chrome.storage.sync.set({ userConfig: this.userConfig }, () => {
+        const bg = window.chrome.extension.getBackgroundPage();
         bg &&
           bg.notice({
             title: "提示",

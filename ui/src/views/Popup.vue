@@ -1,9 +1,7 @@
 <template>
   <div class="popup-page">
     <div class="bg">
-      <h1>
-        <img src="../assets/portal.png" alt width="30" /> Picture Portal
-      </h1>
+      <h1><img src="../assets/portal.png" alt width="30" /> Picture Portal</h1>
     </div>
     <div class="upload-tasks">
       <ul>
@@ -19,18 +17,42 @@
           <ul class="url-types">
             <li class="url-item">
               <span>URL</span>
-              <input readonly type="text" :value="item.prefixUrl.normal" placeholder="普通url" />
-              <div class="copy-btn" :data-clipboard-text="item.prefixUrl.normal">复制</div>
+              <input
+                readonly
+                type="text"
+                :value="item.prefixUrl.normal"
+                placeholder="普通url"
+              />
+              <div
+                class="copy-btn"
+                :data-clipboard-text="item.prefixUrl.normal"
+              >
+                复制
+              </div>
             </li>
             <li class="url-item">
               <span>HTML</span>
-              <input readonly type="text" :value="item.prefixUrl.html" placeholder="html格式" />
-              <div class="copy-btn" :data-clipboard-text="item.prefixUrl.html">复制</div>
+              <input
+                readonly
+                type="text"
+                :value="item.prefixUrl.html"
+                placeholder="html格式"
+              />
+              <div class="copy-btn" :data-clipboard-text="item.prefixUrl.html">
+                复制
+              </div>
             </li>
             <li class="url-item">
               <span>Markdown</span>
-              <input readonly type="text" :value="item.prefixUrl.md" placeholder="md格式" />
-              <div class="copy-btn" :data-clipboard-text="item.prefixUrl.md">复制</div>
+              <input
+                readonly
+                type="text"
+                :value="item.prefixUrl.md"
+                placeholder="md格式"
+              />
+              <div class="copy-btn" :data-clipboard-text="item.prefixUrl.md">
+                复制
+              </div>
             </li>
           </ul>
         </li>

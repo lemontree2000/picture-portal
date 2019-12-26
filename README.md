@@ -1,5 +1,7 @@
-# Chrome 扩展轱辘（脚手架）
-Chrome 扩展脚手架，使用 Vue.js + webpack 来开发和打包Chrome扩展, 支持热重载。
+# Picture Portal 
+> 个人图床 Chrome Extension
+
+
 
 ## 目录结构
 ```
@@ -40,7 +42,7 @@ $ yarn watch
 yarn build
 ```
 
+## 参考了以下资源
 
-## 替换 UI 框架
-
-默认的 UI 框架是使用`vue-cli`生成的`vue.js`项目，可以替换为 `ReactJs`等其它框架，只需要框架编译后的文件生成到`dist/ui`目录即可，并修改`gulpfile.js`自动华脚本中的 UI 脚本编译命令即可。
+* [微博图床 @Aqours](https://github.com/Semibold/Weibo-Picture-Store)
+* [Chrome插件&Vue脚手架 @jae-jae](https://github.com/jae-jae/chrome-extension-gulu) 
