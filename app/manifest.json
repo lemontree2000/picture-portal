@@ -19,7 +19,8 @@
     "storage",
     "alarms",
     "webNavigation",
-    "notifications"
+    "notifications",
+    "contextMenus"
   ],
   "options_ui": {
     "page": "ui/index.html#option",

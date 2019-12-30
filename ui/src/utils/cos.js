@@ -42,6 +42,18 @@ class CosUtil {
       cb
     );
   }
+  getBucket(Prefix, cb) {
+    this.cos.getBucket(
+      {
+        Bucket: this.config.Bucket, // Bucket 格式：test-1250000000
+        Region: this.config.Region,
+        Prefix: "picture-portal/",
+        MaxKeys: 3,
+        Marker: "picture-portal/C流程编辑器-拖拽对象.png"
+      },
+      cb
+    );
+  }
 }
 
 export default new CosUtil();

@@ -15,9 +15,9 @@ const routes = [
     component: () => import("../views/Popup.vue")
   },
   {
-    path: "/background",
+    path: "/history",
     name: "background",
-    component: () => import("../views/Background.vue")
+    component: () => import("../views/history.vue")
   }
 ];
 
